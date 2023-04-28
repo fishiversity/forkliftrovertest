@@ -18,8 +18,8 @@ function forkUp () {
 }
 let activity = 0
 wuKong.stopAllMotor()
-radio.setGroup(40)
-basic.showIcon(IconNames.Pitchfork)
+radio.setGroup(1)
+basic.showNumber(1)
 basic.forever(function () {
     if (activity == 1) {
         forward()
@@ -29,6 +29,8 @@ basic.forever(function () {
         forkUp()
     } else if (activity == 7) {
         forkDown()
+    } else if (activity == 0) {
+        stop()
     } else {
         stop()
     }
